@@ -1,0 +1,28 @@
+<div class="container contact-form">
+  <div class="contact-image">
+      <img src="../../assets/rocket_contact.png" alt="rocket_contact"/>
+  </div>
+  <form [formGroup]="content" (ngSubmit)="showContent()">
+      <h3>Adicione uma mensagem!</h3>
+     <div class="row">
+          <div class="col-md-8 float-center">
+              <div class="form-group form-inline">
+                  <input type="text" formControlName="title" class="form-control" placeholder="Seu nome *" value="" />
+              </div>
+              <!--<div class="form-group">
+                  <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+              </div>
+              <div class="form-group">
+                  <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+              </div>-->
+              <div class="form-group">
+                <textarea formControlName="content" class="form-control" placeholder="Sua mensagem *" style="width: 100%; height: 150px;"></textarea>
+            </div>
+              <div class="form-group">
+                  <input type="submit" name="btnSubmit" class="btnContact" value="Enviar" />
+                  <input name="btnSubmit" class="btnContactSubmit" (click)="showAllNotes()"  value="Listar mensagens" />
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
