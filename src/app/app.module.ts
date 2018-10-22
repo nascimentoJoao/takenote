@@ -4,25 +4,29 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { InsertNoteComponent } from './insert-note/insert-note.component';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { ListNotesComponent } from './list-notes/list-notes.component'; 
+import { ListNotesComponent } from './list-notes/list-notes.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InsertNoteComponent,
-    ListNotesComponent
+    ListNotesComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    FormsModule,
+    ToastrModule.forRoot(),
+    AppRoutingModule
   ],
-  providers: [FormBuilder],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

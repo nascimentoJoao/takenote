@@ -17,7 +17,7 @@ const httpOptions = {
 export class NotesService {
 
   
-  private API_URL = 'http://localhost:8082/api'
+  private API_URL = 'http://192.168.100.78:8082/api'
 
   constructor(
     private http: HttpClient

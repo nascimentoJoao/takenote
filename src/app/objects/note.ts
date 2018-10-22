@@ -1,4 +1,5 @@
 export class Note{
-    title: String;
-    content: String;
+    title: String | string;
+    content: String | string;
 }
+

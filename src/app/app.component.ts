@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NotesService } from './notes.service';
 import { Note } from './objects/note';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -15,43 +16,12 @@ export class AppComponent implements OnInit {
   updatedNote: Note;
 
   constructor(
-    private service: NotesService,
+    private router: Router,
     ){
   }
 
   ngOnInit(){
-
-  /** 
-   * this.newnote = {
-      title: "Gabriel",
-      content: "Enviou uma mensagem!"
-  }
-
-  this.updatedNote = {
-    title: "Editei a mensagem",
-    content: "Com esse conteudo"
-  }
-
-  this.service.createNote(this.newnote).subscribe();
-
-    this.service.getNotes().subscribe(items => {
-      this.notes = items;
-      console.log(this.notes);
-    });
-
-    this.service.getNote(4).subscribe(note => {
-      console.log(note);
-    });
-
-    this.service.updateNote(4, this.updatedNote).subscribe(note => {
-      console.log(note);
-    });
-    
-    this.service.deleteNote(2).subscribe(note =>{
-      console.log(note);
-    })
-    **/
-
+    this.router.navigate(["note"]);
   }
 
 }

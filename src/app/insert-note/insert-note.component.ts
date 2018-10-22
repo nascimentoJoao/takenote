@@ -7,7 +7,8 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-insert-note',
   templateUrl: './insert-note.component.html',
-  styleUrls: ['./insert-note.component.css']
+  styleUrls: ['./insert-note.component.css'],
+  providers: [NotesService, FormBuilder]
 })
 export class InsertNoteComponent implements OnInit {
 
@@ -43,7 +44,9 @@ export class InsertNoteComponent implements OnInit {
   sendContent(note: Note){
     this.noteService.createNote(note).subscribe(
       note=>
-      this.toastr.success(note.title + " enviou uma mensagem!"));
+      this.toastr.success(note.title + " enviou uma mensagem!")),
+      error=>
+      this.toastr.error(error, "Oops! Aconteceu alguma coisa.");
   }
 
   showAllNotes(){
