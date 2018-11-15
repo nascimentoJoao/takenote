@@ -1,6 +1,7 @@
 # Takenote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+It's just a basic Angular project where you can insert and read some notes!
 
 ## Development server
 
